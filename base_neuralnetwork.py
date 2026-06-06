@@ -38,8 +38,8 @@ class Dense(Layer):
         return dx
 
     def update(self, lr):
-        self.W -= lr * self.W
-        self.b -= lr * self.b
+        self.W -= lr * self.dW
+        self.b -= lr * self.db
 
 
 class ReLU(Layer):
@@ -266,9 +266,9 @@ def train(model, X, y, epochs=1000, batch_size=32, lr=0.01):
 np.random.seed(42)
 
 # SINE FUNCTION 
-X = np.linspace(-2 * np.pi, 2 * np.pi, 1000).reshape(-1, 1)
-X = X / (2 * np.pi)
-y = np.sin(X)
+raw_X = np.linspace(-2 * np.pi, 2 * np.pi, 1000).reshape(-1, 1)
+X = raw_X / (2 * np.pi)
+y = np.sin(raw_X)
 
 
 # Building Model 
