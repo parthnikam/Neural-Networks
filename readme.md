@@ -20,7 +20,7 @@
   * took a dataset from kaggle on **Gen Z Dating in India** and trained a neural network to predict their level of satisfaction from the dating scene. 
   * cleaned the data and transformed it into numerical form 
   * used some important columns to act as input and dropped the others
-  * trained the base model with 8 dense layers and an input and an output layer 
+  * trained the base model with 2 dense layers and an input and an output layer 
   * took the help of chatgpt to optimize the model architecture
   * took the help of chatgpt to figure out how to use pytorch on GPU to train the model faster
 
@@ -37,7 +37,10 @@ I needed chatgpt to help me when:
 4. There were certain parts of the code where I knew what I wanted but didn't exactly know what should be written or how it should be carried out.
 
 ### What were the challenges I faced
-1. Initially I was 
+1. Initially I was a little skeptical about using neural networks on a classification task
+  * turns out they work just fine
+2. finding out why accuracy is different in training and testing and that layer dimensions, number of layers and learning rate have a lot to do with it. 
+  * Tried adding dropout and batch normalization to the model
 
 ### What can I confidently do now
 1. I can assess the kind of neural network a problem might need
